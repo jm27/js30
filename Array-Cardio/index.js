@@ -65,7 +65,7 @@ const people = [
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
 const fifteeners = inventors.filter(
-  (inventor) => inventor.year > 1500 && inventor.year <= 1600
+  (inventor) => inventor.year >= 1500 && inventor.year < 1600
 );
 console.log(fifteeners);
 
@@ -100,9 +100,71 @@ console.table(sortedByYears);
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+const boulevardsParis = `
+Boulevards of Paris
+City walls of Paris
+Thiers wall
+Wall of Charles V
+Wall of Philip II Augustus
+*
+City gates of Paris
+Haussmann's renovation of Paris
+Boulevards of the Marshals
+A
+Boulevard Auguste-Blanqui
+B
+Boulevard Barbès
+Boulevard Beaumarchais
+Boulevard de l'Amiral-Bruix
+Boulevard Mortier
+Boulevard Poniatowski
+Boulevard Soult
+C
+Boulevard des Capucines
+Boulevard de la Chapelle
+Boulevard de Clichy
+Boulevard du Crime
+G
+Boulevard du Général-d'Armée-Jean-Simon
+H
+Boulevard Haussmann
+Boulevard de l'Hôpital
+I
+Boulevard des Italiens
+L
+Boulevard Lefebvre
+M
+Boulevard de la Madeleine
+Boulevard de Magenta
+Boulevard Marguerite-de-Rochechouart
+Boulevard Montmartre
+Boulevard du Montparnasse
+R
+Boulevard Raspail
+Boulevard Richard-Lenoir
+S
+Boulevard Saint-Germain
+Boulevard Saint-Michel
+Boulevard de Sébastopol
+Boulevard de Strasbourg
+T
+Boulevard du Temple
+V
+Boulevard Voltaire
+Z
+Boulevard de la Zone`;
+function matchDe(boulevard) {
+  return boulevard.match("de");
+}
 
+const deBoulevards = boulevardsParis.split(/\r?\n/).filter(matchDe);
+
+console.log(deBoulevards);
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+const sortedPersons = people.sort()
+console.log(sortedPersons)
+
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
@@ -122,3 +184,13 @@ const data = [
   "car",
   "truck",
 ];
+
+function sumData(sum, data) {
+  sum[data] ? (sum[data] = sum[data] + 1) : (sum[data] = 1);
+
+  return sum;
+}
+
+const dataCount = data.reduce(sumData, {});
+
+console.log(dataCount);

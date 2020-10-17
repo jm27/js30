@@ -29,3 +29,12 @@
 - propertyName
 - classList.toggle()
 - Event Listener: Transitionend, click
+
+# JS30 - Array-Cardio
+
+- Array.prototype.filter()
+- Array.prototype.map()
+- Array.prototype.sort()
+- Array.prototype.reduce()
+- .match()
+- .split(/\r?\n/) - Regex split on line break
