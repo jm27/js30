@@ -4,13 +4,12 @@ const endpoint =
 
 // Save cities in an Array
 const cities = [];
-
 // Get cities from Url
 fetch(endpoint)
   .then((blob) => blob.json())
   .then((data) => cities.push(...data));
 
-// function to filter cities
+// Function to filter cities
 function findMatches(wordToMatch, cities) {
   return cities.filter((place) => {
     // Create Regex to match word
@@ -19,3 +18,33 @@ function findMatches(wordToMatch, cities) {
     return place.city.match(regex) || place.state.match(regex);
   });
 }
+// Display function
+function displayMatches() {
+  const matchArray = findMatches(this.value, cities);
+  const html = matchArray
+    .map((place) => {
+      const regex = new RegExp(this.value, "gi");
+      const cityName = place.city.replace(
+        regex,
+        `<span class="hl">${value}</span>`
+      );
+      const stateName = place.state.replace(
+        regex,
+        `<span class="hl">${value}</span>`
+      );
+      return `
+      <li>
+      <span class="name"> ${cityName}, ${stateName}</span>
+      <span class="population"> ${place.population}</span>
+      </li>
+      `;
+    })
+    .join("");
+  suggestions.innerHTML = html;
+}
+// Select Search input and suggestions
+const searchInput = document.querySelector(".search");
+const suggestions = document.querySelector(".suggestions");
+// Event listener for change in search input
+searchInput.addEventListener("change", displayMatches);
+searchInput.addEventListener("keyup", displayMatches);
