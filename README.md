@@ -38,3 +38,13 @@
 - Array.prototype.reduce()
 - .match()
 - .split(/\r?\n/) - Regex split on line break
+
+# JS30 - AJAX-Type-Ahead
+
+- fetch()
+- (...spreadOperator)
+- regex = new RegExp
+- .replace()
+- .toString()
+- 3 digit regex (/\B(?=(\d{3})+(?!\d))/g, ',')
+- .join()

@@ -18,6 +18,11 @@ function findMatches(wordToMatch, cities) {
     return place.city.match(regex) || place.state.match(regex);
   });
 }
+// Function to add commas to numbers
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 // Display function
 function displayMatches() {
   const matchArray = findMatches(this.value, cities);
@@ -26,16 +31,16 @@ function displayMatches() {
       const regex = new RegExp(this.value, "gi");
       const cityName = place.city.replace(
         regex,
-        `<span class="hl">${value}</span>`
+        `<span class="hl">${this.value}</span>`
       );
       const stateName = place.state.replace(
         regex,
-        `<span class="hl">${value}</span>`
+        `<span class="hl">${this.value}</span>`
       );
       return `
       <li>
       <span class="name"> ${cityName}, ${stateName}</span>
-      <span class="population"> ${place.population}</span>
+      <span class="population"> ${numberWithCommas(place.population)}</span>
       </li>
       `;
     })
