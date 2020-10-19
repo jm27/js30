@@ -20,6 +20,8 @@ const comments = [
 const oldEnough = people.some((person) => person.year < 2001);
 console.log(oldEnough);
 // Array.prototype.every() // is everyone 19 or older?
+const oldEnoughTwo = people.every((person) => person.year < 2001);
+console.log(oldEnoughTwo);
 
 // Array.prototype.find()
 // Find is like filter, but instead returns just the one you are looking for
