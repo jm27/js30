@@ -17,6 +17,8 @@ const comments = [
 
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
+const oldEnough = people.some((person) => person.year < 2001);
+console.log(oldEnough);
 // Array.prototype.every() // is everyone 19 or older?
 
 // Array.prototype.find()
@@ -28,3 +30,5 @@ console.log(commentID);
 // Array.prototype.findIndex()
 // Find the comment with this ID
 // delete the comment with the ID of 823423
+const indexComment = comments.findIndex((comment) => comment.id == 823423);
+console.log(indexComment);
