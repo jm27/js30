@@ -32,7 +32,7 @@
 
 # JS30 - Array-Cardio
 
-- Array.prototype.filter()
+- Array.prototype.filter() 
 - Array.prototype.map()
 - Array.prototype.sort()
 - Array.prototype.reduce()
@@ -48,3 +48,11 @@
 - .toString()
 - 3 digit regex (/\B(?=(\d{3})+(?!\d))/g, ',')
 - .join()
+
+# JS30 - Array-Cardio-2
+
+- new Date().getFullYear() = Get current year
+- Array.prototype.some()
+- Array.prototype.every()
+- Array.prototype.findIndex()
+- Array.prototype.find()

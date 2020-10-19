@@ -17,10 +17,12 @@ const comments = [
 
 // Some and Every Checks
 // Array.prototype.some() // is at least one person 19 or older?
-const oldEnough = people.some((person) => person.year < 2001);
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
+const oldEnough = people.some((person) => currentYear - person.year >= 19);
 console.log(oldEnough);
 // Array.prototype.every() // is everyone 19 or older?
-const oldEnoughTwo = people.every((person) => person.year < 2001);
+const oldEnoughTwo = people.every((person) => currentYear - person.year >= 19);
 console.log(oldEnoughTwo);
 
 // Array.prototype.find()
