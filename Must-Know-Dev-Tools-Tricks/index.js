@@ -39,5 +39,18 @@ dogs.forEach((dog) => {
   console.groupEnd(`${dog.name}`);
 });
 // counting
-
+console.count("jesus");
+console.count("jesus");
+console.count("jesus");
+console.count("jesus");
+console.count("jesus");
 // timing
+console.time("fetching data");
+fetch("https://api.github.com/users/jm27")
+  .then((response) => response.json())
+  .then((data) => {
+    console.timeEnd("fetching data");
+    console.log(data);
+  });
+
+console.table(dogs);

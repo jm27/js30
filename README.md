@@ -56,3 +56,16 @@
 - Array.prototype.every()
 - Array.prototype.findIndex()
 - Array.prototype.find()
+
+# JS30 - Dev-Tools-Domination
+
+- console.warn()
+- console.error()
+- console.info()
+- console.assert()
+- console.clear()
+- console.dir()
+- console.group() - console.groupEnd()
+- console.count()
+- console.time() - console.timeEnd()
+- console.table()
