@@ -15,6 +15,8 @@ let lastX = 0;
 let lastY = 0;
 // HUE color
 let hue = 0;
+// Set direction
+let direction = true;
 // Function to start drawing
 function draw(e) {
   if (!isDrawing) return; // if not drawing return
@@ -24,9 +26,12 @@ function draw(e) {
   ctx.lineTo(e.offsetX, e.offsetY); // Create line to x and y from event
   ctx.stroke(); // Paint
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`; // Color
-  ctx.lineWidth = 10; //
   // Set variables equal to lastX and lastY
   [lastX, lastY] = [e.offsetX, e.offsetY]; // Destructuring
+  hue++; // Increment hue
+  hue >= 360 ? (hue = 0) : ""; // if hue is bigger than 360 reset count
+  ctx.lineWidth >= 100 || ctx.lineWidth <= 1 ? (direction = !direction) : "";
+  direction ? ctx.lineWidth++ : ctx.lineWidth--; // if direction is tru line width grows else make smaller
 }
 // Add event listeners
 canvas.addEventListener("mousemove", draw);
