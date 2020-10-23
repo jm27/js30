@@ -13,7 +13,10 @@ function handleCheck(e) {
       if (checkbox == this || checkbox == lastChecked) {
         // Toggle in between
         console.log("inBetween");
-        inBetween = !inBetween;
+        inBetween = !inBetween; // Flag variable
+      }
+      if (inBetween) {
+        checkbox.check = true;
       }
     });
   }
