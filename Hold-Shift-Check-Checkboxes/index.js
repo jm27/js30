@@ -4,11 +4,18 @@ const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
 let lastChecked;
 // Handle Change function
 function handleCheck(e) {
-  console.log(e);
   // Check it they had shift key down
   // And they are checking the box
-  if (e.shiftkey && this.checked) {
-    //
+  let inBetween = false;
+  if (e.shiftKey && this.checked) {
+    checkboxes.forEach((checkbox) => {
+      console.log(checkbox);
+      if (checkbox == this || checkbox == lastChecked) {
+        // Toggle in between
+        console.log("inBetween");
+        inBetween = !inBetween;
+      }
+    });
   }
   lastChecked = this;
 }
