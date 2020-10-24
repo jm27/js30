@@ -77,3 +77,9 @@
 - Array.prototype.forEach()
 - selector('.checkbox').checked = true
 - toggleBoolean = !toggleBoolean
+
+# JS30 - Key-Sequence-Detection
+
+- Array.prototype.push()
+- Array.prototype.splice(-array2.length - 1, Array.length - array2.length) = array lenght is less equal to match
+- cornify.add()
