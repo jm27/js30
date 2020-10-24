@@ -69,3 +69,11 @@
 - console.count()
 - console.time() - console.timeEnd()
 - console.table()
+
+# JS30 - Hold-Shift-And-Check-Checkboxes
+
+- input[type="checkbox"]
+- e.shiftKey
+- Array.prototype.forEach()
+- selector('.checkbox').checked = true
+- toggleBoolean = !toggleBoolean
