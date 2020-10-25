@@ -1,0 +1,70 @@
+.slides {
+  width: 800px;
+  height: 500px;
+  border: 2px solid black;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  background: var(--pink);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  grid-template:
+    "a b b"
+    "a b b"
+    "c c c";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  color: white;
+  font-size: large;
+  font-family: sans-serif;
+  border: 5px solid white;
+  transition: all 0.25s;
+  transform: translateX(-200%);
+}
+
+.slide.next + .slide {
+  transform: translateX(200%);
+}
+
+.slide.prev {
+  z-index: 10;
+  transform: translateX(-100%);
+}
+.slide.current {
+  z-index: 10;
+  transform: translateX(0);
+}
+.slide.next {
+  z-index: 10;
+  transform: translateX(100%);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.a {
+  grid-area: a;
+  border: 5px solid white;
+}
+.b {
+  grid-area: b;
+  border: 5px solid white;
+}
+.c {
+  grid-area: c;
+  border: 5px solid white;
+}
