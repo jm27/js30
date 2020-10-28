@@ -83,3 +83,10 @@
 - Array.prototype.push()
 - Array.prototype.splice(-array2.length - 1, Array.length - array2.length) = array lenght is less equal to match
 - cornify.add()
+
+# JS30 - Slide-in-on-Scroll
+
+- Debounce function
+- window.scrollY
+- window.innerHeight
+- element.offsetTop
