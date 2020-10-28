@@ -24,15 +24,15 @@
 # JS30 - Flex Panels Image Gallery
 
 - flex
-- .panel > * (children elements)
-- .panel > *:first-child, .panel > *:last-child
+- .panel > \* (children elements)
+- .panel > _:first-child, .panel > _:last-child
 - propertyName
 - classList.toggle()
 - Event Listener: Transitionend, click
 
 # JS30 - Array-Cardio
 
-- Array.prototype.filter() 
+- Array.prototype.filter()
 - Array.prototype.map()
 - Array.prototype.sort()
 - Array.prototype.reduce()
@@ -90,3 +90,10 @@
 - window.scrollY
 - window.innerHeight
 - element.offsetTop
+
+# JS30 - Custom Video Player
+
+- video[this.name] = this.value
+- event.offsetX
+- addEventListenet("mousemove", function callback(){})
+- progress.addEventListener('mousemove', (e) => mousedown && function(e));
