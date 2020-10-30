@@ -97,3 +97,10 @@
 - event.offsetX
 - addEventListenet("mousemove", function callback(){})
 - progress.addEventListener('mousemove', (e) => mousedown && function(e));
+
+# JS30 - Mouse Move Shadow
+
+- const { offsetWidth: width} = element
+- const { offsetY: y} = element
+- Math.round()
+- element.style.textShadow
