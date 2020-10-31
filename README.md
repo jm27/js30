@@ -104,3 +104,9 @@
 - const { offsetY: y} = element
 - Math.round()
 - element.style.textShadow
+
+# JS30 - Sort Without Articles
+- Array.prototype.sort()
+- replace(/^(a |the |an )/i, '')
+- trim()
+- join('')
