@@ -110,3 +110,11 @@
 - replace(/^(a |the |an )/i, '')
 - trim()
 - join('')
+
+# JS30 - Local Storage
+- JSON.parse() converts to Object
+- JSON.stringify() convert to JSON string
+- localStorage.getItem('key')
+- localStorage.setItem('key', 'item')
+- localStorage.removeItem('key')
+- addEventListener('submit', function)
