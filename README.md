@@ -118,3 +118,9 @@
 - localStorage.setItem('key', 'item')
 - localStorage.removeItem('key')
 - addEventListener('submit', function)
+
+# JS30 - Adding Up Times with Reduce
+- Array.from(nodeList)
+- Math.floor()
+- Mod operator %
+- parseFloat
