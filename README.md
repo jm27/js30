@@ -124,3 +124,10 @@
 - Math.floor()
 - Mod operator %
 - parseFloat
+
+# JS30 - WebCam fun
+- navigator.mediaDevices.getUserMedia({video: true, audio: false})
+- video.srcObject 
+- video.play()
+- document.createElement()
+- video.addEventListener('canplay', function)
