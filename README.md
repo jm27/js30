@@ -131,3 +131,9 @@
 - video.play()
 - document.createElement()
 - video.addEventListener('canplay', function)
+
+# JS30 - Native Speech Recognition
+- window.SpeechRecognition
+- element.appendChild()
+- addEventlistener('result')
+- addEventlistener('end')
