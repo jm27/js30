@@ -140,3 +140,10 @@
 
 # JS30 - Geolocation
 - navigator.geolocation.watchPosition()
+
+# JS30 - Follow Allong Highlight Link
+- Element.getBoundingClientRect
+- window.scrollY
+- window.scrollX
+- Element.style.transform = `translate(100px, 100px)
+- addEventListener('mouseenter', function)
