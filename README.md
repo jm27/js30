@@ -137,3 +137,6 @@
 - element.appendChild()
 - addEventlistener('result')
 - addEventlistener('end')
+
+# JS30 - Geolocation
+- navigator.geolocation.watchPosition()
