@@ -147,3 +147,8 @@
 - window.scrollX
 - Element.style.transform = `translate(100px, 100px)
 - addEventListener('mouseenter', function)
+
+# JS30 - Speech Synthesis
+- SpeechSynthesisUtterances
+- SpeechSynthesis.cancel()
+- SpeechSynthesis.speak(msg) 
