@@ -152,3 +152,8 @@
 - SpeechSynthesisUtterances
 - SpeechSynthesis.cancel()
 - SpeechSynthesis.speak(msg) 
+
+# JS30 - Sticky Navbar
+- element.offsetTop
+- window.scrollY
+- add class to body to work on different elements body .class .element
