@@ -157,3 +157,8 @@
 - element.offsetTop
 - window.scrollY
 - add class to body to work on different elements body .class .element
+
+# JS30 - Event Capture
+-capture
+-once
+-event.stopPropagation()
