@@ -162,3 +162,10 @@
 -capture
 -once
 -event.stopPropagation()
+
+# JS30 - Follow Along Dropdown
+-element.getBoundingClientRect()
+-setTimeout()
+-transform: translate(left, top)
+-element.addEventListener('mouseenter', function)
+-element.addEventListener('mouseleave', function)
