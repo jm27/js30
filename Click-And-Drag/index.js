@@ -7,17 +7,22 @@ let scrollLeft;
 // Event Listeners
 items.addEventListener("mousedown", (e) => {
   isDown = true;
-  slider.classList.add("active");
-  console.log(e);
+  items.classList.add("active");
+  startX = e.pageX - items.offsetLeft;
+  scrollLeft = items.scrollLeft;
 });
 items.addEventListener("mouseleave", () => {
   isDown = false;
-  slider.classList.remove("active");
+  items.classList.remove("active");
 });
 items.addEventListener("mouseup", () => {
   isDown = false;
-  slider.classList.remove("active");
+  items.classList.remove("active");
 });
-items.addEventListener("mousemove", () => {
+items.addEventListener("mousemove", (e) => {
   if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - items.offsetLeft;
+  const walk = (x - startX) * 3;
+  items.scrollLeft = scrollLeft - walk;
 });
