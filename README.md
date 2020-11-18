@@ -169,3 +169,8 @@
 -transform: translate(left, top)
 -element.addEventListener('mouseenter', function)
 -element.addEventListener('mouseleave', function)
+
+# JS30 - Click and Drag to Scroll
+-event.pageX
+-element.offsetLeft
+-element.scrollLeft
