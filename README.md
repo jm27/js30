@@ -174,3 +174,9 @@
 -event.pageX
 -element.offsetLeft
 -element.scrollLeft
+
+# JS30 - Video Speed Controller
+-element.pageY
+-element.offsetHeight
+-element.offsetTop
+-toFixed(2)
