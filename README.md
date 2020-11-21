@@ -180,3 +180,11 @@
 -element.offsetHeight
 -element.offsetTop
 -toFixed(2)
+
+# JS30 - Countdown Timer
+-clearInterval(var)
+-Math.floor()
+-new Date()
+-getHours()
+-getMinutes()
+-parseInt()
