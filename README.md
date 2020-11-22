@@ -188,3 +188,9 @@
 -getHours()
 -getMinutes()
 -parseInt()
+
+# JS30 - Whack A Mole
+-setTimeout()
+-Math.floor()
+-Math.random()
+-Math.round()
