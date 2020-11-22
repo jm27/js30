@@ -3,6 +3,8 @@ const holes = document.querySelectorAll(".hole");
 const scoreBoard = document.querySelector(".score");
 const moles = document.querySelectorAll(".mole");
 let lastHole;
+let timeup = false;
+let score = 0;
 
 // Create a function with random amount of time
 function randomTime(min, max) {
@@ -26,5 +28,27 @@ function peep() {
   hole.classList.add("up");
   setTimeout(() => {
     hole.classList.remove("up");
+    if (!timeUp) peep();
+    peep();
   }, time);
 }
+
+// Start Game
+function startGame() {
+  scoreBoard.textContent = 0;
+  timeUp = false;
+  score = 0;
+  peep();
+  setTimeout(() => (timeUp = true), 1000);
+}
+
+// Handle click on mole
+function bonk(e) {
+  if (!e.isTrusted) return;
+  score++;
+  this.classList.remove("up");
+  scoreBoard.textContent = score;
+}
+
+// Listen to click on moles
+moles.forEach((mole) => mole.addEventListener("click", bonk));
