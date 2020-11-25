@@ -1,6 +1,9 @@
 // Get HTML selects
 const fromSelect = document.querySelector('[name="from_currency"]');
+const fromInput = document.querySelector('[name="from_amount"]');
 const toSelect = document.querySelector('[name="to_currency"]');
+const form = document.querySelector(".app form");
+const toEl = document.querySelector(".to_amount");
 const endPoint = "http://api.exchangeratesapi.io/latest";
 // Cache Rates
 const ratesByBase = {};
@@ -69,6 +72,25 @@ async function convert(amount, from, to) {
   }
   // Convert amount passed in
   const convertedAmount = ratesByBase[from].rates[to];
+  return convertedAmount;
+}
+
+// Format currency
+function formatCurrency(amount, currency) {
+  return Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency,
+  }).format(amount);
+}
+
+// Handle typing on form
+async function handleInput(e) {
+  const rawAmount = await convert(
+    fromInput.value,
+    fromSelect.value,
+    toSelect.value
+  );
+  toEl.textContent = formatCurrency(rawAmount, toSelect.value);
 }
 
 const optionsHTML = generateOptions(currencies);
@@ -76,3 +98,6 @@ const optionsHTML = generateOptions(currencies);
 // Populate HTML element
 fromSelect.innerHTML = optionsHTML;
 toSelect.innerHTML = optionsHTML;
+
+// Listen input event on form
+form.addEventListener("input", handleInput);
