@@ -1,5 +1,9 @@
+const endPoint = "http://api.exchangeratesapi.io/latest";
+// Cache Rates
+const ratesByBase = {};
+
 // get Rates
-async function fetchRates(base = "USD") {
+export async function fetchRates(base = "USD") {
   const res = await fetch(
     `https://cors-anywhere.herokuapp.com/${endPoint}?base=${base}`
   );
@@ -8,7 +12,7 @@ async function fetchRates(base = "USD") {
 }
 
 // Convert Function
-async function convert(amount, from, to) {
+export async function convert(amount, from, to) {
   // Check if we have the rate
   if (!ratesByBase[from]) {
     console.log(`We dont have ${from} to convert to ${to}`);
